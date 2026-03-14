@@ -7,7 +7,8 @@ for i in $(seq -w 1 100):
 do
 	mkdir -p day-${i}
 cat <<EOF > day-${i}/README.md
-# Day ${i} :shipit:
+# Day ${i}
+:shipit:
 
 ## Task
 
