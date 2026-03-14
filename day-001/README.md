@@ -1,4 +1,4 @@
-# Day 001
+# Day 001 :shipit:
 
 ## Task
 

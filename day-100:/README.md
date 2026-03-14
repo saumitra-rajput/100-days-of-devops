@@ -1,4 +1,4 @@
-# Day 100:
+# Day 100: :shipit:
 
 ## Task
 
