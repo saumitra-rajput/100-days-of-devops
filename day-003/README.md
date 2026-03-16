@@ -1,6 +1,6 @@
 # Day 003 :shipit:
 
-## Task
+## Task 
 
 Following security audits, the xFusionCorp Industries security team has rolled out new protocols, including the restriction of direct root SSH login.
 
