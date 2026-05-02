@@ -9,6 +9,12 @@ Look for the stashed changes under /usr/src/kodekloudrepos/official git reposito
 
 ## Commands Used
 
+![alt text](image.png)
+
+![alt text](image-1.png)
+![alt text](image-2.png)
 ## What I Learned
 
 ## Notes
+
+![alt text](image-3.png)
