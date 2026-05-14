@@ -19,6 +19,68 @@ Note: Perform this task using the natasha user, and ensure the repository or exi
 
 ## Commands Used
 
+![alt text](image.png)
+
+![alt text](image-1.png)
+
+![alt text](image-2.png)
+
+```
+# Switch to natasha user
+sudo su - natasha
+
+# Go to repository
+cd /usr/src/kodekloudrepos/blog
+
+# Check branches
+git branch
+
+# Merge feature branch into master
+git checkout master
+git merge feature
+
+# Create post-update hook
+cat > .git/hooks/post-update << 'EOF'
+#!/bin/bash
+
+current_branch=$(git rev-parse --abbrev-ref HEAD)
+
+if [ "$current_branch" = "master" ]; then
+    current_date=$(date +%F)
+    tag_name="release-${current_date}"
+
+    if ! git rev-parse "$tag_name" >/dev/null 2>&1; then
+        git tag "$tag_name"
+        git push origin "$tag_name"
+        echo "Created tag: $tag_name"
+    fi
+fi
+EOF
+
+# Make hook executable
+chmod +x .git/hooks/post-update
+
+# Make a small test change
+echo "release test" >> release-test.txt
+
+# Commit test change
+git add release-test.txt
+git commit -m "Test post-update hook"
+
+# Push master branch
+git push origin master
+
+# Manually run hook once for testing (if needed)
+.git/hooks/post-update
+
+# Verify tag
+git tag
+
+# Push tags if not already pushed
+git push origin --tags
+```
 ## What I Learned
 
 ## Notes
+
+![alt text](image-3.png)
