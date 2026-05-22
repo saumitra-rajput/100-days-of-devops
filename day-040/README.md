@@ -21,6 +21,7 @@ ssh banner@stapp03
 # Check running containers
 docker ps
 
+
 # Access the kkloud container
 docker exec -it kkloud bash
 
