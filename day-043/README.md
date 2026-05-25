@@ -13,7 +13,19 @@ b. Create a container named demo using the image you pulled.
 c. Map host port 6200 to container port 80. Please keep the container in running state.
 ## Commands Used
 
+```
+docker pull image:tag
 
+docker run -d --name jarvis -p 80:80 image:tag
+
+docker ps -a
+
+curl http://localhost:80
+![alt text](image-1.png)
+
+![alt text](image.png)
+
+```
 ## What I Learned
 
 ## Notes
