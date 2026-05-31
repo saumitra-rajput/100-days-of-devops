@@ -27,6 +27,41 @@ curl http://localhost:8093/
 
 ## Commands Used
 
+```
+FROM python
+
+WORKDIR /app
+
+COPY . .
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+EXPOSE 5003
+
+CMD ["python3","server.py"]
+
+```
+
+
+
+```
+  21  vi Dockerfile 
+   25  docker build -t nautilus/python-app .
+   26  ls
+   27  docker images
+   32  docker run -itd -p 8093:5003 --name pythonapp_nautilus nautilus/python-app
+   33  docker ps
+   34  curl http://localhost:8093
+
+   ```
+
+![alt text](image.png)
+
+
+
+![alt text](image-1.png)
 ## What I Learned
 
 ## Notes
+
+![alt text](image-2.png)
