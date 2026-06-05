@@ -28,3 +28,5 @@ kubectl describe pod/httpd-pod
 ## What I Learned
 
 ## Notes
+
+![alt text](image-2.png)
